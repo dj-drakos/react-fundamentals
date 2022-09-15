@@ -25,12 +25,15 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const hello = React.createElement('span', {key: 'hello', children: 'Hello'})
-    const world = React.createElement('span', {key: 'world', children: 'World'})
-    const container = React.createElement('div', {
-      className: 'container',
-      children: [hello, world],
-    })
+    const hello = React.createElement('span', {}, 'Hello')
+    const world = React.createElement('span', {}, 'World')
+    const container = React.createElement(
+      'div',
+      {className: 'container'},
+      hello,
+      ' ',
+      world,
+    )
     const root = ReactDOM.createRoot(rootElement).render(container)
   </script>
 </body>
